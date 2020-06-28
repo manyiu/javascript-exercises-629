@@ -1,4 +1,6 @@
 const { compareAge, dataArrayToObject } = require("./index");
+const dataArray = require("./dataArray");
+const dataObject = require("./dataObject.json");
 
 describe("Test compareAges", () => {
   test("Brian & Daniel", () => {
@@ -11,5 +13,17 @@ describe("Test compareAges", () => {
 
   test("Anna & Tina", () => {
     expect(compareAge("Anna", "Tina")).toEqual(99);
+  });
+
+  test("Yiu & Tina", () => {
+    expect(compareAge("Yiu", "Tina")).toEqual(99);
+  });
+});
+
+describe("Test dataArrayToObject", () => {
+  test("Convert", () => {
+    expect(JSON.stringify(dataArrayToObject(dataArray))).toEqual(
+      JSON.stringify(dataObject)
+    );
   });
 });

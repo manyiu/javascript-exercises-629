@@ -14,7 +14,7 @@ describe("Test Factorial Function", () => {
   });
 
   test("10!", () => {
-    expect(factorial(5)).toEqual(3628800);
+    expect(factorial(10)).toEqual(3628800);
   });
 });
 
@@ -36,6 +36,6 @@ describe("Test fibonacci Function", () => {
   });
 
   test("12", () => {
-    expect(fibonacci(10)).toEqual(144);
+    expect(fibonacci(12)).toEqual(144);
   });
 });
