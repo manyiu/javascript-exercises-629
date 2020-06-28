@@ -1,13 +1,27 @@
 const dataAge = require("./dataAge.json");
 
 const compareAge = (nameA, nameB) => {
-  // Compare A's age and B's age using dataAge
-  // Return the older age number
-  // If person does not exist, "secret" is true, or data are not avaliable, return 99
+  const {
+    [nameA]: { age: ageA = 99, secret: secretA = false } = {},
+    [nameB]: { age: ageB = 99, secret: secretB = false } = {},
+  } = dataAge;
+
+  if (secretA || secretB) {
+    return 99;
+  }
+
+  return Math.max(ageA, ageB);
 };
 
 const dataArrayToObject = (dataArray) => {
-  // Convert dataArray to dataObject
+  const dataObject = {};
+
+  for (let i = 0; i < dataArray.length; i++) {
+    const { id, name } = dataArray[i];
+    dataObject[id] = name;
+  }
+
+  return dataObject;
 };
 
 module.exports = { compareAge, dataArrayToObject };

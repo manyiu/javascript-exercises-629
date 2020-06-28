@@ -1,11 +1,43 @@
 function factorial(n) {
-  // Return the factorial of n
-  // e.g. 5! = 5 x 4 x 3 x 2 x 1 = 120
+  let result = 1;
+
+  for (let i = 1; i <= n; i++) {
+    result *= i;
+  }
+
+  // while (n >= 1) {
+  //   result *= n;
+  //   n--;
+  // }
+
+  return result;
 }
 
 function fibonacci(n) {
-  // Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ...
-  // Return the n-th number in Fibonacci sequence
+  if (n <= 0) {
+    return 0;
+  }
+
+  if (n < 2) {
+    return 1;
+  }
+
+  let p0;
+  let p1 = 1;
+  let p2 = 0;
+
+  for (let i = 2; i <= n; i++) {
+    p0 = p2 + p1;
+    [p2, p1] = [p1, p0];
+  }
+
+  // while (n > 1) {
+  //   p0 = p2 + p1;
+  //   [p2, p1] = [p1, p0];
+  //   n--;
+  // }
+
+  return p0;
 }
 
 module.exports = { factorial, fibonacci };
