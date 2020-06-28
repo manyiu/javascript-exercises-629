@@ -6,7 +6,6 @@ const compareAge = (nameA, nameB) => {
   // If person does not exist, "secret" is true, or data are not avaliable, return 99
 };
 
-// Optional
 const dataArrayToObject = (dataArray) => {
   // Convert dataArray to dataObject
 };
