@@ -1,0 +1,33 @@
+{
+  "Anna": {
+    "age": 19,
+    "secret": true
+  },
+  "Brian": {
+    "age": 25
+  },
+  "Charmaine": {
+    "age": 26,
+    "secret": true
+  },
+  "Daniel": {
+    "age": 20
+  },
+  "Elsa": {
+    "age": 20
+  },
+  "Kay": {
+    "age": 29,
+    "secret": true
+  },
+  "Kelvin": {},
+  "Kit": { "secret": false },
+  "Peter": {
+    "age": 18,
+    "secret": false
+  },
+  "Tina": {
+    "age": 22,
+    "secret": false
+  }
+}
