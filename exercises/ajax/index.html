@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ajax exercise</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <button onclick="fetchTheList()">Fetch List</button>
+    <div id="myListWrapper"></div>
+
+    <script>
+      function fetchTheList() {
+        // TODO
+        // 1. when user click the button, call the getList function
+      }
+
+      function getList(onListFetched) {
+        // TODO
+        // 1. fetch https://jsonplaceholder.typicode.com/posts
+        // 2. when fetch succeeds, call onListFetched
+        // 3. when fetch fails, console log the error
+      }
+
+      function showListTitle(list) {
+        var myListWrapper = document.getElementById("myListWrapper");
+
+        while (myListWrapper.firstChild) {
+          myListWrapper.removeChild(myListWrapper.lastChild);
+        }
+
+        var ulElement = document.createElement("ul");
+        if (list) {
+          for (var i = 0; i < list.length; i++) {
+            var liElement = document.createElement("li");
+            liElement.textContent = list[i].title;
+            ulElement.appendChild(liElement);
+          }
+        }
+        myListWrapper.appendChild(ulElement);
+      }
+    </script>
+  </body>
+</html>
