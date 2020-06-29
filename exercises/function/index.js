@@ -4,6 +4,6 @@ var multiply = (x = 0, y = x) => {
 
 // Refactor the code below to use an arrow function
 const fibonacciRecursive = (n) =>
-  n < 3 ? 1 : fibonacci(n - 1) + fibonacci(n - 2);
+  n < 3 ? 1 : fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2);
 
 module.exports = { multiply, fibonacciRecursive };
