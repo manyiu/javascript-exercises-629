@@ -5,9 +5,9 @@ var multiply = (x, y) => {
 };
 
 // Refactor the code below to use an arrow function
-const fibonacci = function (n) {
+const fibonacciRecursive = function (n) {
   if (n < 3) return 1;
-  return fibonacci(n - 1) + fibonacci(n - 2);
+  return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2);
 };
 
-module.exports = { multiply, fibonacci };
+module.exports = { multiply, fibonacciRecursive };
